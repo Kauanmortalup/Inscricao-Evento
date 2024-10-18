@@ -1,0 +1,41 @@
+.card {
+  padding: 0rem;
+  margin: 2rem;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(93, 93, 93, 0.4);
+  text-align: center;
+  max-width: 20rem;
+  max-height: 40rem;
+  background-color: rgb(65, 55, 55);
+}
+
+.card img {
+  border-radius: 1rem;
+}
+
+.card h2 {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.card p {
+  text-align: left;
+  text-align: justify;
+  padding: 4px;
+}
+
+button {
+  text-decoration: none;
+  border: none;
+  color: black;
+  transition: 0.4s;
+  font-size: 1.4em;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: transparent;
+  color: #ffffff;
+}

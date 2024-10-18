@@ -1,0 +1,39 @@
+.cadastro {
+  margin: 50px;
+  width: 90%;
+  height: 17rem;
+}
+
+.cadastro h2 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.cadastro input {
+  text-decoration: none;
+  width: 100%;
+  font-size: 1.8rem;
+  border: none;
+  color: #000000;
+  background-color: rgb(185, 185, 185);
+  border-radius: 5px;
+}
+
+.button_container {
+  display: flex;
+  justify-content: space-between; /* Alinha os botões nas extremidades */
+  margin-top: 20px; /* Adiciona um espaçamento superior */
+  padding: 0%;
+}
+
+.button_container button {
+  font-size: 2em;
+  width: 18rem;
+  background-color: rgb(185, 185, 185);
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.cadastro h3 {
+  margin-bottom: 0px;
+}
