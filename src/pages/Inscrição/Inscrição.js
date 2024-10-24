@@ -11,6 +11,8 @@ const Inscrição = () => {
   const [email, setEmail] = useState("");
   //const [vaga, setVaga] = useState(0);
   const [users, setUsers] = useState([]);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [message, setMessage] = useState("");
 
   const userCollectionRef = collection(db, "users");
 
@@ -25,6 +27,7 @@ const Inscrição = () => {
   const salvarUser = async () => {
     if (vagasDisponiveis.length <= 0) {
       console.log("Acabou as vagas");
+      setErrorMessage("Infelizmente, as vagas se esgotaram.");
     } else {
       // Tem vaga
       const user = await addDoc(userCollectionRef, {
@@ -33,6 +36,7 @@ const Inscrição = () => {
         vaga: vagasDisponiveis[0],
       });
       console.log("Usuário adicionado com ID: ", user.id); // Exibe o ID no console ao criar o usuário
+      setMessage("Ingresso gerado. Código de identificação: ", user.id);
     }
   };
 
@@ -80,6 +84,10 @@ const Inscrição = () => {
           {/* Função para voltar para Home */}
           <button onClick={() => navigate("/")}>Voltar</button>
         </div>
+        {/* Condicionalmente exibe a mensagem se houver algum erro */}
+        {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
+        {/* Condicionalmente exibe a mensagem de confirmação */}
+        {message && <p className={styles.message}>{message}</p>}
       </div>
     </div>
   );
